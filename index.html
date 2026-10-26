@@ -64,18 +64,18 @@ nav ul a:hover{color:#fff;background:rgba(212,175,95,.08);}
   filter:drop-shadow(0 0 40px rgba(212,175,95,.4));
 }
 .silhouette.dog{
-  left:0;
-  height:600px;
+  left:-140px;
+  height:540px;
   width:auto;
-  max-width:45%;
-  top:180px;                     /* ← поднимаем к «Лебедеву» */
-  bottom:auto;                  /* ← отключаем нижнюю привязку */
+  top:180px;
+  bottom:auto;
   object-fit:contain;
-  object-position:bottom left;
+  object-position:top left;
 }
-@media(max-width:1400px){.silhouette.dog{height:520px;top:150px;bottom:auto;}}
-@media(max-width:1100px){.silhouette.dog{height:440px;top:130px;bottom:auto;max-width:55%;}}
-@media(max-width:900px){.silhouette.dog{height:300px;top:100px;left:-20px;bottom:auto;opacity:.18;max-width:70%;}}
+
+@media(max-width:1400px){.silhouette.dog{height:470px;top:160px;bottom:auto;left:-120px;}}
+@media(max-width:1100px){.silhouette.dog{height:400px;top:140px;bottom:auto;left:-100px;}}
+@media(max-width:900px){.silhouette.dog{height:280px;top:110px;left:-80px;bottom:auto;opacity:.15;}}
 
 .hero h1{font-size:58px;font-weight:800;margin-bottom:22px;line-height:1.05;letter-spacing:-1px;}
 .hero h1 .line1{display:block;color:#fff;font-size:44px;font-weight:600;margin-bottom:6px;}
