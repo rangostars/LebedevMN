@@ -3,338 +3,625 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Лебедев Максим Николаевич — Профориентация СПбГУВМ</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Лебедев М.Н. — Довузовская подготовка и профориентация СПбГУВМ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0f2544; --navy-2:#08172e; --navy-3:#173a6b;
-  --blue:#7ec8e3; --gold:#c9a961;
-  --bg:#eef2f8; --card:#ffffff;
-  --text:#0f2544; --muted:#5a6b85;
+  --bg:#071520; --bg-2:#0a1f2e; --bg-3:#0e2a3d;
+  --navy:#0b1e2d; --navy-2:#061420;
+  --gold:#d4af5f; --gold-2:#e8c778;
+  --green:#3fae7c; --green-2:#4fcf94;
+  --white:#f4f7fa; --muted:#8fa3b8; --muted-2:#b8c6d6;
+  --line:rgba(212,175,95,.22); --line-soft:rgba(255,255,255,.08);
+  --card:#0d2434;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;
-  background:linear-gradient(180deg,#eef2f8 0%,#e3ebf6 100%);}
-h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.2}
+body{font-family:'Inter',sans-serif;color:var(--white);line-height:1.6;background:var(--bg);}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.15;letter-spacing:.2px}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-.container{max-width:1180px;margin:0 auto;padding:0 24px}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;
+  color:var(--gold);text-transform:uppercase;margin-bottom:16px;}
+.eyebrow::before{content:"— ";color:var(--gold);}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(15,37,68,.96);
-  backdrop-filter:blur(12px);border-bottom:1px solid rgba(126,200,227,.15);}
-nav .container{display:flex;align-items:center;justify-content:space-between;height:72px;}
+nav{position:sticky;top:0;z-index:100;background:rgba(7,21,32,.85);
+  backdrop-filter:blur(16px);border-bottom:1px solid var(--line-soft);}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:76px;}
 .brand{display:flex;align-items:center;gap:14px;}
-.brand img{height:44px;width:auto;}
-.brand-text{color:#fff;font-family:'Montserrat';font-weight:700;font-size:15px;line-height:1.1;}
-.brand-text small{display:block;color:var(--blue);font-weight:500;font-size:11px;letter-spacing:1px;text-transform:uppercase;}
-nav ul{display:flex;gap:6px;list-style:none;}
-nav a{color:#dbe3ef;font-size:14px;font-weight:500;padding:9px 14px;border-radius:8px;transition:.2s;}
-nav a:hover{background:rgba(126,200,227,.12);color:var(--blue);}
-@media(max-width:900px){nav ul{display:none}}
+.brand img{height:46px;width:auto;}
+.brand-text{color:#fff;font-family:'Montserrat';font-weight:700;font-size:14px;line-height:1.15;letter-spacing:.5px;}
+.brand-text small{display:block;color:var(--muted);font-weight:400;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
+nav ul{display:flex;gap:4px;list-style:none;align-items:center;}
+nav ul a{color:var(--muted-2);font-size:14px;font-weight:500;padding:10px 16px;border-radius:8px;transition:.25s;}
+nav ul a:hover{color:#fff;background:rgba(212,175,95,.08);}
+.btn-nav{padding:11px 22px !important;background:var(--gold);color:var(--navy-2) !important;font-weight:700 !important;border-radius:10px !important;}
+.btn-nav:hover{background:var(--gold-2) !important;transform:translateY(-1px);}
+@media(max-width:980px){nav ul{display:none}}
 
 /* HERO */
-.hero{position:relative;overflow:hidden;color:#fff;padding:90px 0 100px;
-  background:radial-gradient(circle at 80% 20%,rgba(126,200,227,.18),transparent 55%),
-  radial-gradient(circle at 10% 90%,rgba(201,169,97,.12),transparent 55%),
-  linear-gradient(135deg,#08172e 0%,#0f2544 60%,#173a6b 100%);}
-.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:60px;align-items:center;position:relative;z-index:2;}
-.eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2.5px;
-  color:var(--blue);text-transform:uppercase;margin-bottom:16px;}
-.hero h1{font-size:52px;font-weight:800;margin-bottom:18px;color:#fff;}
-.hero h1 span{color:var(--blue);}
-.position{font-size:18px;color:#c5d1e3;margin-bottom:14px;font-weight:500;}
-.desc{color:#a8b6ce;margin-bottom:34px;font-size:16px;max-width:560px;}
-.btns{display:flex;gap:14px;flex-wrap:wrap;}
-.btn{padding:14px 26px;border-radius:10px;font-weight:600;font-size:15px;
-  transition:.25s;display:inline-block;cursor:pointer;border:none;font-family:'Inter';}
-.btn-primary{background:var(--blue);color:var(--navy);}
-.btn-primary:hover{background:#a5d9ec;transform:translateY(-2px);box-shadow:0 12px 30px rgba(126,200,227,.35);}
-.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue);}
-.photo-wrap{position:relative;display:flex;justify-content:center;
-  align-items:flex-end;height:100%;}
-.photo-wrap img{
-  height:100%;
-  width:auto;
-  max-width:100%;
-  object-fit:contain;
-  object-position:bottom;
-  filter:drop-shadow(0 30px 60px rgba(0,0,0,.5));
-}
+.hero{position:relative;overflow:hidden;color:#fff;padding:100px 0 90px;
+  background:
+    linear-gradient(90deg,rgba(7,21,32,.98) 0%,rgba(7,21,32,.92) 40%,rgba(7,21,32,.55) 75%,rgba(7,21,32,.35) 100%),
+    url('univ-bg.jpg') center/cover no-repeat,
+    linear-gradient(135deg,#061420 0%,#0e2a3d 100%);
+  min-height:640px;}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;
+  background:linear-gradient(180deg,transparent,var(--bg));z-index:1;pointer-events:none;}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;position:relative;z-index:2;}
+
+/* Silhouettes */
+.silhouette{position:absolute;bottom:0;z-index:1;opacity:.14;pointer-events:none;
+  filter:drop-shadow(0 0 40px rgba(212,175,95,.35));}
+.silhouette.dog{left:-40px;height:420px;}
+.silhouette.horse{right:-30px;height:460px;}
+@media(max-width:900px){.silhouette{display:none}}
+
+.hero h1{font-size:58px;font-weight:800;margin-bottom:22px;line-height:1.05;letter-spacing:-1px;}
+.hero h1 .line1{display:block;color:#fff;font-size:44px;font-weight:600;margin-bottom:6px;}
+.hero h1 .gold{color:var(--gold);}
+.handwritten{font-family:'Montserrat',sans-serif;font-style:italic;font-weight:500;
+  font-size:18px;color:var(--gold-2);opacity:.85;transform:rotate(-3deg);
+  display:inline-block;margin-top:8px;}
+.position{font-size:16px;color:var(--muted-2);margin-bottom:10px;font-weight:500;max-width:560px;}
+.desc{color:#c9d6e3;margin:22px 0 34px;font-size:16px;max-width:560px;line-height:1.7;}
+.btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.btn{padding:15px 30px;border-radius:12px;font-weight:700;font-size:15px;
+  transition:.25s;display:inline-flex;align-items:center;gap:10px;cursor:pointer;
+  border:none;font-family:'Inter';letter-spacing:.3px;}
+.btn-gold{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);
+  color:var(--navy-2);box-shadow:0 10px 30px rgba(212,175,95,.25);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(212,175,95,.4);}
+.btn-ghost{background:rgba(255,255,255,.04);color:#fff;border:1px solid rgba(255,255,255,.18);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);background:rgba(212,175,95,.05);}
+
+.photo-wrap{position:relative;display:flex;justify-content:center;align-items:flex-end;height:520px;}
+.photo-wrap img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom;
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.7));position:relative;z-index:2;}
 .photo-glow{position:absolute;bottom:0;left:50%;transform:translateX(-50%);
-  width:340px;height:340px;border-radius:50%;
-  background:radial-gradient(circle,rgba(126,200,227,.35),transparent 70%);z-index:-1;}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;text-align:center;}
-  .hero h1{font-size:34px;}.desc{margin:0 auto 30px;}.btns{justify-content:center;}}
+  width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,95,.3),transparent 70%);z-index:1;}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;text-align:center;gap:20px;}
+  .hero h1{font-size:36px;}.hero h1 .line1{font-size:28px;}.desc{margin:20px auto 28px;}.btns{justify-content:center;}
+  .position{margin-left:auto;margin-right:auto;}.photo-wrap{height:380px;}}
+
+/* Кнопки-аудитории (как в референсе) */
+.audience-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;
+  background:rgba(13,36,52,.7);border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;position:relative;z-index:2;backdrop-filter:blur(10px);}
+.audience-bar a{display:flex;align-items:center;gap:14px;padding:20px 24px;
+  border-right:1px solid var(--line-soft);transition:.25s;color:#fff;}
+.audience-bar a:last-child{border-right:none;}
+.audience-bar a:hover{background:rgba(212,175,95,.08);}
+.audience-bar .ab-ico{width:42px;height:42px;border-radius:10px;flex-shrink:0;
+  background:rgba(212,175,95,.12);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-size:20px;}
+.audience-bar b{display:block;font-family:'Montserrat';font-size:15px;font-weight:700;color:#fff;margin-bottom:2px;}
+.audience-bar span{font-size:12.5px;color:var(--muted);}
+@media(max-width:820px){.audience-bar{grid-template-columns:1fr;}
+  .audience-bar a{border-right:none;border-bottom:1px solid var(--line-soft);}}
 
 /* SECTIONS */
-section{padding:80px 0;}
-.bg-gray{background:linear-gradient(180deg,#e6edf7 0%,#dde7f4 100%);
-  border-top:1px solid rgba(15,37,68,.06);border-bottom:1px solid rgba(15,37,68,.06);}
-.section-title{font-size:36px;font-weight:800;margin-bottom:14px;color:var(--navy);}
-.section-sub{color:var(--muted);font-size:16px;margin-bottom:44px;max-width:680px;}
-.photo-block{margin-top:44px;}
-.photo-block img{width:100%;border-radius:20px;box-shadow:0 20px 50px rgba(15,37,68,.18);}
+section{padding:90px 0;position:relative;}
+.section-title{font-size:40px;font-weight:800;margin-bottom:16px;color:#fff;letter-spacing:-.5px;}
+.section-title .gold{color:var(--gold);}
+.section-sub{color:var(--muted);font-size:16px;margin-bottom:50px;max-width:700px;}
 
-/* CARDS */
-.grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-.card{background:var(--card);border:1px solid rgba(15,37,68,.08);border-radius:18px;
-  padding:34px;transition:.35s;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(15,37,68,.05);}
-.card::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;
-  background:linear-gradient(180deg,var(--blue),var(--gold));transform:scaleY(0);
-  transform-origin:top;transition:.35s;}
-.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(15,37,68,.14);}
-.card:hover::before{transform:scaleY(1);}
-.card .icon{width:56px;height:56px;border-radius:14px;
-  background:linear-gradient(135deg,#0f2544,#173a6b);display:flex;align-items:center;
-  justify-content:center;font-size:26px;margin-bottom:20px;box-shadow:0 8px 20px rgba(15,37,68,.25);}
-.card h3{font-size:20px;margin-bottom:10px;color:var(--navy);}
-.card p{color:var(--muted);font-size:15px;}
-.card a{color:var(--navy);font-weight:600;text-decoration:underline;}
-@media(max-width:700px){.grid-4{grid-template-columns:1fr}}
+/* PROJECTS */
+.projects-head{display:flex;justify-content:space-between;align-items:flex-end;
+  flex-wrap:wrap;gap:20px;margin-bottom:40px;}
+.projects-head .link-all{color:var(--gold);font-size:14px;font-weight:600;}
+.grid-projects{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.proj-card{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;
+  overflow:hidden;transition:.35s;display:flex;flex-direction:column;}
+.proj-card:hover{transform:translateY(-6px);border-color:var(--line);
+  box-shadow:0 24px 50px rgba(0,0,0,.4);}
+.proj-img{height:190px;overflow:hidden;position:relative;background:#0a1f2e;}
+.proj-img img{width:100%;height:100%;object-fit:cover;transition:.6s;}
+.proj-card:hover .proj-img img{transform:scale(1.08);}
+.proj-num{position:absolute;top:12px;left:12px;background:rgba(7,21,32,.85);
+  color:var(--gold);font-family:'Montserrat';font-weight:700;font-size:12px;
+  padding:5px 10px;border-radius:6px;border:1px solid var(--line);backdrop-filter:blur(6px);}
+.proj-body{padding:22px;display:flex;flex-direction:column;flex:1;}
+.proj-body h3{font-size:17px;color:#fff;margin-bottom:10px;line-height:1.3;}
+.proj-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.proj-tag{font-size:10.5px;font-weight:600;padding:3px 8px;border-radius:4px;
+  background:rgba(63,174,124,.12);color:var(--green-2);border:1px solid rgba(63,174,124,.25);letter-spacing:.3px;text-transform:uppercase;}
+.proj-body p{color:var(--muted);font-size:13.5px;line-height:1.55;flex:1;margin-bottom:16px;}
+.proj-btn{padding:10px 18px;border-radius:8px;background:transparent;color:var(--gold);
+  border:1px solid var(--line);font-size:13px;font-weight:600;text-align:center;transition:.25s;}
+.proj-btn:hover{background:var(--gold);color:var(--navy-2);}
+@media(max-width:1024px){.grid-projects{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid-projects{grid-template-columns:1fr}}
+
+/* STATS */
+.stats{background:linear-gradient(135deg,var(--navy-2) 0%,var(--bg-3) 100%);
+  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:50px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;align-items:center;}
+.stat{text-align:center;padding:0 12px;border-right:1px solid var(--line-soft);}
+.stat:last-child{border-right:none;}
+.stat-num{font-family:'Montserrat';font-size:36px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:6px;}
+.stat-lbl{font-size:12.5px;color:var(--muted);line-height:1.35;}
+@media(max-width:820px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:30px;}
+  .stat:nth-child(2){border-right:none;}}
+@media(max-width:500px){.stats-grid{grid-template-columns:1fr;}.stat{border-right:none;}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:center;}
+.about-text p{color:var(--muted-2);font-size:16px;margin-bottom:16px;line-height:1.75;}
+.about-features{list-style:none;margin-top:24px;}
+.about-features li{color:#fff;padding-left:32px;position:relative;
+  margin-bottom:12px;font-size:15px;}
+.about-features li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:16px;}
+.about-photo{border-radius:20px;overflow:hidden;position:relative;
+  border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.5);}
+.about-photo img{width:100%;height:auto;}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:36px;}}
+
+/* ACTIVITY */
+.grid-activity{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.act-card{background:linear-gradient(135deg,rgba(13,36,52,.9) 0%,rgba(10,31,46,.9) 100%);
+  border:1px solid var(--line-soft);border-radius:18px;padding:36px;transition:.35s;position:relative;overflow:hidden;}
+.act-card::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;
+  background:linear-gradient(180deg,var(--gold),var(--green));transform:scaleY(0);
+  transform-origin:top;transition:.4s;}
+.act-card:hover{transform:translateY(-5px);border-color:var(--line);box-shadow:0 24px 50px rgba(0,0,0,.4);}
+.act-card:hover::before{transform:scaleY(1);}
+.act-card .icon{width:58px;height:58px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(212,175,95,.18),rgba(63,174,124,.12));
+  border:1px solid var(--line);display:flex;align-items:center;
+  justify-content:center;font-size:26px;margin-bottom:22px;}
+.act-card h3{font-size:20px;margin-bottom:10px;color:#fff;}
+.act-card p{color:var(--muted);font-size:15px;margin-bottom:14px;}
+.act-card a{color:var(--gold);font-size:14px;font-weight:600;}
+.act-card a:hover{text-decoration:underline;}
+@media(max-width:700px){.grid-activity{grid-template-columns:1fr}}
 
 /* MODULES */
-.timeline{background:linear-gradient(135deg,#08172e 0%,#0f2544 60%,#173a6b 100%);
-  color:#fff;border-radius:24px;padding:60px 48px;box-shadow:0 30px 60px rgba(15,37,68,.25);
+.modules-wrap{background:linear-gradient(135deg,var(--navy-2) 0%,var(--bg-3) 100%);
+  border:1px solid var(--line);border-radius:24px;padding:60px 48px;
   position:relative;overflow:hidden;}
-.timeline::after{content:"";position:absolute;top:-80px;right:-80px;width:300px;height:300px;
-  border-radius:50%;background:radial-gradient(circle,rgba(126,200,227,.2),transparent 70%);}
-.timeline h2{color:#fff;position:relative;z-index:2;}
-.timeline .section-sub{color:#a8b6ce;position:relative;z-index:2;}
+.modules-wrap::after{content:"";position:absolute;top:-100px;right:-100px;
+  width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,95,.15),transparent 70%);pointer-events:none;}
 .mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:2;}
-.mod{background:rgba(255,255,255,.06);border:1px solid rgba(126,200,227,.22);
-  border-radius:14px;padding:24px;transition:.3s;}
-.mod:hover{background:rgba(126,200,227,.12);transform:translateY(-4px);}
-.mod-ico{font-size:30px;margin-bottom:12px;}
+.mod{background:rgba(255,255,255,.03);border:1px solid var(--line-soft);
+  border-radius:14px;padding:26px;transition:.3s;}
+.mod:hover{background:rgba(212,175,95,.06);border-color:var(--line);transform:translateY(-4px);}
+.mod-ico{font-size:30px;margin-bottom:14px;}
 .mod h4{color:#fff;font-size:16px;margin-bottom:8px;}
-.mod p{color:#a8b6ce;font-size:14px;}
+.mod p{color:var(--muted);font-size:14px;}
 @media(max-width:900px){.mod-grid{grid-template-columns:1fr}}
-@media(max-width:700px){.timeline{padding:40px 24px}}
+@media(max-width:700px){.modules-wrap{padding:40px 24px}}
 
 /* AUDIENCE */
-.audience{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.aud{background:#fff;border-radius:18px;padding:34px;border-top:4px solid var(--blue);
-  box-shadow:0 8px 24px rgba(15,37,68,.06);transition:.3s;}
-.aud:nth-child(2){border-top-color:var(--gold);}
-.aud:nth-child(3){border-top-color:var(--navy);}
-.aud:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(15,37,68,.14);}
-.aud h3{font-size:20px;margin-bottom:8px;color:var(--navy);}
-.aud p{color:var(--muted);font-size:14.5px;margin-bottom:14px;}
+.aud-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.aud{background:var(--card);border:1px solid var(--line-soft);border-radius:18px;
+  padding:32px 28px;transition:.3s;position:relative;overflow:hidden;}
+.aud::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),transparent);opacity:0;transition:.3s;}
+.aud:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:0 24px 50px rgba(0,0,0,.4);}
+.aud:hover::before{opacity:1;}
+.aud-ico{font-size:32px;margin-bottom:16px;}
+.aud h3{font-size:18px;margin-bottom:10px;color:#fff;}
+.aud p{color:var(--muted);font-size:14px;margin-bottom:14px;}
 .aud ul{list-style:none;}
-.aud li{color:var(--muted);font-size:14.5px;padding-left:24px;position:relative;margin-bottom:9px;}
-.aud li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:700;}
-@media(max-width:820px){.audience{grid-template-columns:1fr}}
+.aud li{color:var(--muted-2);font-size:13.5px;padding-left:22px;position:relative;margin-bottom:8px;line-height:1.5;}
+.aud li::before{content:"✓";position:absolute;left:0;color:var(--green-2);font-weight:700;}
+@media(max-width:1024px){.aud-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.aud-grid{grid-template-columns:1fr}}
 
 /* CONTACTS */
-.contacts{background:linear-gradient(135deg,#08172e 0%,#0f2544 60%,#173a6b 100%);
-  color:#fff;border-radius:24px;padding:60px 48px;display:grid;
-  grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;
-  box-shadow:0 30px 60px rgba(15,37,68,.25);position:relative;overflow:hidden;}
-.contacts::before{content:"";position:absolute;bottom:-100px;left:-100px;width:300px;height:300px;
-  border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,.15),transparent 70%);}
-.contacts h2{color:#fff;position:relative;z-index:2;}
+.contacts-wrap{background:linear-gradient(135deg,var(--navy-2) 0%,var(--bg-3) 100%);
+  border:1px solid var(--line);border-radius:24px;padding:60px 56px;
+  display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center;
+  position:relative;overflow:hidden;}
+.contacts-wrap::before{content:"";position:absolute;bottom:-120px;left:-120px;
+  width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,95,.15),transparent 70%);pointer-events:none;}
+.contacts-wrap::after{content:"";position:absolute;top:-80px;right:-80px;
+  width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(63,174,124,.12),transparent 70%);pointer-events:none;}
 .contact-item{display:flex;gap:16px;margin-bottom:20px;align-items:flex-start;position:relative;z-index:2;}
-.contact-item .ci{width:46px;height:46px;background:rgba(126,200,227,.15);border-radius:12px;
-  display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;
-  border:1px solid rgba(126,200,227,.25);}
-.contact-item b{display:block;color:#fff;font-size:15px;margin-bottom:2px;}
-.contact-item span{color:#a8b6ce;font-size:14.5px;}
-.contact-item a{color:var(--blue);text-decoration:underline;}
+.contact-item .ci{width:46px;height:46px;background:rgba(212,175,95,.1);
+  border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;
+  justify-content:center;font-size:19px;flex-shrink:0;}
+.contact-item b{display:block;color:#fff;font-size:14.5px;margin-bottom:3px;font-weight:600;}
+.contact-item span{color:var(--muted-2);font-size:14.5px;}
+.contact-item a{color:var(--gold);}
+.contact-item a:hover{text-decoration:underline;}
+.socials{display:flex;gap:12px;margin-top:26px;position:relative;z-index:2;flex-wrap:wrap;}
+.social-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;
+  border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--line-soft);
+  color:#fff;font-size:14px;font-weight:500;transition:.25s;}
+.social-btn:hover{background:rgba(212,175,95,.1);border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
 .qr{text-align:center;position:relative;z-index:2;}
-.qr img{width:160px;height:160px;border-radius:14px;background:#fff;padding:10px;margin:0 auto;}
-.qr p{color:#a8b6ce;font-size:13px;margin-top:14px;}
-@media(max-width:820px){.contacts{grid-template-columns:1fr;padding:40px 24px}}
-footer{text-align:center;padding:36px 0;color:var(--muted);font-size:13.5px;
-  border-top:1px solid rgba(15,37,68,.08);margin-top:60px;}
+.qr img{width:180px;height:180px;border-radius:16px;background:#fff;padding:12px;margin:0 auto;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);}
+.qr p{color:var(--muted);font-size:13px;margin-top:16px;line-height:1.5;}
+@media(max-width:820px){.contacts-wrap{grid-template-columns:1fr;padding:40px 28px;}}
+
+footer{text-align:center;padding:40px 0;color:var(--muted);font-size:13.5px;
+  border-top:1px solid var(--line-soft);margin-top:40px;}
+footer b{color:var(--gold);font-weight:600;}
 </style>
 </head>
 <body>
-<!-- NAV -->
+
+<!-- НАВИГАЦИЯ -->
 <nav>
   <div class="container">
     <div class="brand">
       <img src="logo-univ.png" alt="СПбГУВМ">
-      <div class="brand-text">Лебедев М.Н.<small>СПбГУВМ · Профориентация</small></div>
+      <div class="brand-text">
+        СПбГУВМ
+        <small>Довузовская подготовка</small>
+      </div>
     </div>
     <ul>
       <li><a href="#about">Обо мне</a></li>
-      <li><a href="#activity">Деятельность</a></li>
+      <li><a href="#projects">Проекты</a></li>
       <li><a href="#modules">Профмодули</a></li>
-      <li><a href="#holidays">Prof-каникулы</a></li>
       <li><a href="#audience">Для кого</a></li>
       <li><a href="#contacts">Контакты</a></li>
+      <li><a href="#contacts" class="btn-nav">Связаться →</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">Профориентация · СПбГУВМ</div>
-      <h1>Лебедев <span>Максим</span> Николаевич</h1>
-      <p class="position">Заместитель начальника отдела довузовской подготовки и профориентации</p>
-      <p class="desc">ФГБОУ ВО «Санкт-Петербургский государственный университет ветеринарной медицины». Помогаю школьникам найти путь в профессию — через олимпиады, агроклассы, профмодули и Prof-каникулы.</p>
-      <div class="btns">
-        <a href="https://vetolimpia.ru/" target="_blank" class="btn btn-primary">Олимпиада «Ветолимпия»</a>
-        <a href="https://profspbguvm.ru/" target="_blank" class="btn btn-outline">Prof-каникулы</a>
-        <a href="#contacts" class="btn btn-outline">Связаться</a>
+  <img src="dog-silhouette.png"   class="silhouette dog"   alt="">
+  <img src="horse-silhouette.png" class="silhouette horse" alt="">
+
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">СПбГУВМ · Довузовская подготовка</span>
+        <h1>
+          <span class="line1">Помогаем школьникам</span>
+          найти путь <span class="gold">в профессию</span>
+        </h1>
+        <div class="handwritten">знания, выбор, развитие ✦</div>
+        <p class="position" style="margin-top:18px;">Лебедев Максим Николаевич — заместитель начальника отдела довузовской подготовки и профориентации</p>
+        <p class="desc">ФГБОУ ВО «Санкт-Петербургский государственный университет ветеринарной медицины». Помогаем школьникам узнать мир ветеринарии, аграрных технологий и биологии — и сделать осознанный выбор профессии.</p>
+        <div class="btns">
+          <a href="#projects" class="btn btn-gold">Узнать о проектах →</a>
+          <a href="#about" class="btn btn-ghost">▶ Смотреть видео</a>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <div class="photo-glow"></div>
+        <img src="photo.png" alt="Лебедев Максим Николаевич">
       </div>
     </div>
-    <div class="photo-wrap">
-      <div class="photo-glow"></div>
-      <img src="photo.png" alt="Лебедев Максим Николаевич">
+
+    <div class="audience-bar">
+      <a href="#audience">
+        <div class="ab-ico">🎓</div>
+        <div><b>Школьникам</b><span>Открыть мир профессии</span></div>
+      </a>
+      <a href="#audience">
+        <div class="ab-ico">📚</div>
+        <div><b>Учителям</b><span>Методическая поддержка</span></div>
+      </a>
+      <a href="#audience">
+        <div class="ab-ico">🏫</div>
+        <div><b>Директорам школ</b><span>Партнёрские программы</span></div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<!-- ЦИФРЫ -->
+<div class="stats">
   <div class="container">
-    <span class="eyebrow">Обо мне</span>
-    <h2 class="section-title">Профориентация — это живой опыт, а не лекция</h2>
-    <p class="section-sub">Более десяти лет помогаю школьникам Санкт-Петербурга и регионов России прикоснуться к миру ветеринарной медицины и аграрных технологий. Соединяю три инструмента: олимпиадное движение, практические профмодули и проектные конкурсы федерального уровня.</p>
-    <div class="photo-block"><img src="photo-about.jpg" alt="Обо мне"></div>
-  </div>
-</section>
-<!-- ACTIVITY -->
-<section id="activity" class="bg-gray">
-  <div class="container">
-    <span class="eyebrow">Деятельность</span>
-    <h2 class="section-title">Основные направления работы</h2>
-    <div class="grid-4">
-      <div class="card"><div class="icon">🌱</div>
-        <h3>Агротехнологические классы</h3>
-        <p>Профильные классы в школах-партнёрах с углублённым изучением биологии, химии и основ аграрных технологий.</p>
-      </div>
-      <div class="card"><div class="icon">🏆</div>
-        <h3>Олимпиада «Ветолимпия»</h3>
-        <p>Ежегодная олимпиада школьников по ветеринарии и биологии. <a href="https://vetolimpia.ru/" target="_blank">vetolimpia.ru →</a></p>
-      </div>
-      <div class="card"><div class="icon">🔬</div>
-        <h3>Экскурсионные профмодули</h3>
-        <p>Погружение в университет: клиника, музеи, лаборатории, зооферма.</p>
-      </div>
-      <div class="card"><div class="icon">🎓</div>
-        <h3>Prof-каникулы</h3>
-        <p>Каникулярные профориентационные смены для школьников. <a href="https://profspbguvm.ru/" target="_blank">profspbguvm.ru →</a></p>
-      </div>
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-num">1500+</div><div class="stat-lbl">школьников ежегодно</div></div>
+      <div class="stat"><div class="stat-num">50+</div><div class="stat-lbl">школ-партнёров по всей России</div></div>
+      <div class="stat"><div class="stat-num">12</div><div class="stat-lbl">профориентационных проектов</div></div>
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-lbl">лет опыта в профориентации</div></div>
+      <div class="stat"><div class="stat-num">1897</div><div class="stat-lbl">традиции и инновации с года</div></div>
     </div>
-    <div class="photo-block"><img src="photo-activity.jpg" alt="Направления работы"></div>
+  </div>
+</div>
+
+<!-- ПРОЕКТЫ -->
+<section id="projects">
+  <div class="container">
+    <div class="projects-head">
+      <div>
+        <span class="eyebrow">Проекты СПбГУВМ</span>
+        <h2 class="section-title">Наши <span class="gold">проекты</span></h2>
+        <p class="section-sub" style="margin-bottom:0;">Образовательные, профориентационные и просветительские проекты для школьников, учителей и партнёрских школ.</p>
+      </div>
+      <a href="#audience" class="link-all">Все проекты →</a>
+    </div>
+    <div class="grid-projects">
+
+      <div class="proj-card">
+        <div class="proj-img">
+          <span class="proj-num">01</span>
+          <img src="photo-activity.jpg" alt="Ветеринарная олимпиада">
+        </div>
+        <div class="proj-body">
+          <h3>Ветеринарная олимпиада «Ветолимпия»</h3>
+          <div class="proj-tags"><span class="proj-tag">Знания</span><span class="proj-tag">Практика</span></div>
+          <p>Ежегодная олимпиада школьников по ветеринарии и биологии — с региональным и федеральным этапами.</p>
+          <a href="https://vetolimpia.ru/" target="_blank" class="proj-btn">Узнать больше →</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img">
+          <span class="proj-num">02</span>
+          <img src="photo-modules.jpg" alt="Экскурсии в университет">
+        </div>
+        <div class="proj-body">
+          <h3>Экскурсионные профмодули</h3>
+          <div class="proj-tags"><span class="proj-tag">Лаборатории</span><span class="proj-tag">Практика</span></div>
+          <p>Погружение в студенческую жизнь: современные лаборатории, клиника и встречи с преподавателями.</p>
+          <a href="#modules" class="proj-btn">Записаться →</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img">
+          <span class="proj-num">03</span>
+          <img src="photo-agrontri.jpg" alt="Агроклассы и проектные школы">
+        </div>
+        <div class="proj-body">
+          <h3>Агроклассы и проектные школы</h3>
+          <div class="proj-tags"><span class="proj-tag">Агро</span><span class="proj-tag">Практика</span></div>
+          <p>Специализированные занятия, проектная деятельность в области агро и биотехнологий.</p>
+          <a href="#audience" class="proj-btn">Стать участником →</a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-img">
+          <span class="proj-num">04</span>
+          <img src="photo-holidays.jpg" alt="Prof-каникулы">
+        </div>
+        <div class="proj-body">
+          <h3>Prof-каникулы</h3>
+          <div class="proj-tags"><span class="proj-tag">Каникулы</span><span class="proj-tag">Мастер-классы</span></div>
+          <p>Уникальная возможность провести каникулы с пользой: мастер-классы, экскурсии, новые друзья.</p>
+          <a href="https://profspbguvm.ru/" target="_blank" class="proj-btn">Узнать о лагере →</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- MODULES -->
-<section id="modules">
+<!-- ОБО МНЕ -->
+<section id="about" style="background:var(--bg-2);">
   <div class="container">
-    <div class="timeline">
-      <span class="eyebrow" style="color:var(--blue)">Экскурсионные профмодули</span>
-      <h2 class="section-title">Направления профмодулей</h2>
-      <p class="section-sub">Пять блоков, из которых собирается день погружения в профессию.</p>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="photo-about.jpg" alt="Лебедев Максим Николаевич">
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">Обо мне</span>
+        <h2 class="section-title">Профориентация <span class="gold">как призвание</span></h2>
+        <p>Более 10 лет помогаю школьникам находить своё призвание в мире ветеринарной медицины, биотехнологий и агропромышленного комплекса. За это время — сотни экскурсий, десятки олимпиад и тысячи ребят, впервые открывших для себя удивительный мир науки о животных.</p>
+        <ul class="about-features">
+          <li>Заместитель начальника отдела довузовской подготовки и профориентации</li>
+          <li>Организатор всероссийских школьных олимпиад и научных конференций</li>
+          <li>Автор программ агроклассов и проектных смен для старшеклассников</li>
+          <li>Партнёрство с ведущими школами и предприятиями АПК России</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ДЕЯТЕЛЬНОСТЬ -->
+<section id="activity" style="background:var(--bg);">
+  <div class="container">
+    <span class="eyebrow">Направления работы</span>
+    <h2 class="section-title">Чем мы <span class="gold">занимаемся</span></h2>
+    <p class="section-sub">Организуем и курируем профориентационную работу университета со школьниками, учителями и предприятиями АПК.</p>
+    <div class="grid-activity">
+      <div class="act-card">
+        <div class="icon">🎓</div>
+        <h3>Довузовская подготовка</h3>
+        <p>Подготовительные курсы, консультации по поступлению, знакомство с направлениями обучения и правилами приёма в СПбГУВМ.</p>
+        <a href="https://spbguvm.ru/" target="_blank">Сайт университета →</a>
+      </div>
+      <div class="act-card">
+        <div class="icon">🏆</div>
+        <h3>Олимпиады и конкурсы</h3>
+        <p>Организация школьных олимпиад по биологии и ветеринарии, научно-практических конференций, конкурсов исследовательских работ.</p>
+        <a href="https://vetolimpia.ru/" target="_blank">Ветолимпия →</a>
+      </div>
+      <div class="act-card">
+        <div class="icon">🔬</div>
+        <h3>Профмодули и экскурсии</h3>
+        <p>Практические занятия в лабораториях, клиниках и на фермерских хозяйствах — уверенное погружение в профессию.</p>
+        <a href="#modules">Профмодули →</a>
+      </div>
+      <div class="act-card">
+        <div class="icon">🤝</div>
+        <h3>Партнёрство с АПК</h3>
+        <p>Сотрудничество с профильными предприятиями: стажировки, целевое обучение, практические занятия на производстве.</p>
+        <a href="#contacts">Стать партнёром →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРОФМОДУЛИ -->
+<section id="modules" style="background:var(--bg-2);">
+  <div class="container">
+    <span class="eyebrow">Профориентационные модули</span>
+    <h2 class="section-title">Профмодули <span class="gold">на любой вкус</span></h2>
+    <p class="section-sub">Гибкие программы для школьных групп: от одного дня до нескольких недель. Проводим как на базе университета, так и на площадке вашей школы.</p>
+    <div class="modules-wrap">
       <div class="mod-grid">
-        <div class="mod"><div class="mod-ico">🐾</div><h4>Погружение в профессию</h4><p>Знакомство с университетом и направлениями подготовки.</p></div>
-        <div class="mod"><div class="mod-ico">🦉</div><h4>Живые объекты</h4><p>Работа с птицами в лаборатории — уникальный опыт.</p></div>
-        <div class="mod"><div class="mod-ico">🏛️</div><h4>Музеи университета</h4><p>Анатомия, патологическая анатомия, паразитология.</p></div>
-        <div class="mod"><div class="mod-ico">🏥</div><h4>Ветеринарная клиника</h4><p>Приём, диагностика, работа врача изнутри.</p></div>
-        <div class="mod"><div class="mod-ico">💬</div><h4>Итоговая встреча</h4><p>Разбор профессий и ориентиры на будущее.</p></div>
-      </div>
-    </div>
-    <div class="photo-block"><img src="photo-modules.jpg" alt="Профмодули"></div>
-  </div>
-</section>
-
-<!-- PROF-КАНИКУЛЫ -->
-<section id="holidays" class="bg-gray">
-  <div class="container">
-    <span class="eyebrow">Каникулярный проект</span>
-    <h2 class="section-title">Prof-каникулы</h2>
-    <p class="section-sub">Профориентационные смены во время школьных каникул: школьники живут университетской жизнью — практикумы, лаборатории, встречи с преподавателями и студентами.</p>
-    <div class="btns" style="margin-bottom:20px">
-      <a href="https://profspbguvm.ru/" target="_blank" class="btn btn-primary">Сайт проекта</a>
-    </div>
-    <div class="photo-block"><img src="photo-holidays.jpg" alt="Prof-каникулы"></div>
-  </div>
-</section>
-<!-- CONTESTS -->
-<section id="contests">
-  <div class="container">
-    <span class="eyebrow">Федеральные проекты</span>
-    <h2 class="section-title">Конкурсы под эгидой Минсельхоза России</h2>
-    <div class="grid-4">
-      <div class="card"><div class="icon">🚜</div>
-        <h3>АгроНТРИ-2026</h3>
-        <p>Всероссийский конкурс для школьников по агротехнологиям и цифровому сельскому хозяйству. Региональные и федеральные этапы.</p>
-        <div class="photo-block"><img src="photo-agrontri.jpg" alt="АгроНТРИ"></div>
-      </div>
-      <div class="card"><div class="icon">🌾</div>
-        <h3>Я В АГРО</h3>
-        <p>Проектный конкурс для тех, кто видит своё будущее в агропромышленном комплексе. Возможность заявить о себе на федеральном уровне.</p>
-        <div class="photo-block"><img src="photo-yavagro.jpg" alt="Я В АГРО"></div>
+        <div class="mod">
+          <div class="mod-ico">🐾</div>
+          <h4>Ветеринария и уход</h4>
+          <p>Знакомство с клинической практикой и уходом за животными.</p>
+        </div>
+        <div class="mod">
+          <div class="mod-ico">🧬</div>
+          <h4>Биотехнологии</h4>
+          <p>Лабораторные работы с современным оборудованием.</p>
+        </div>
+        <div class="mod">
+          <div class="mod-ico">🌾</div>
+          <h4>АПК и агроклассы</h4>
+          <p>Современное сельское хозяйство и агроэкология.</p>
+        </div>
+        <div class="mod">
+          <div class="mod-ico">🔍</div>
+          <h4>Наука молодых</h4>
+          <p>Ребёнок становится соавтором реального научного исследования.</p>
+        </div>
+        <div class="mod">
+          <div class="mod-ico">👩‍🏫</div>
+          <h4>Педмастерская</h4>
+          <p>Программа для учителей биологии и естественных наук.</p>
+        </div>
+        <div class="mod">
+          <div class="mod-ico">🏛️</div>
+          <h4>День открытых дверей</h4>
+          <p>Полный тур по университету и встреча с преподавателями.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AUDIENCE -->
-<section id="audience" class="bg-gray">
+<!-- ДЛЯ КОГО -->
+<section id="audience">
   <div class="container">
     <span class="eyebrow">Для кого</span>
-    <h2 class="section-title">Три аудитории — три формата</h2>
-    <div class="audience">
-      <div class="aud"><h3>🎒 Школьникам</h3>
-        <p>Понять, твоя ли это профессия — до поступления.</p>
-        <ul><li>Олимпиада «Ветолимпия»</li><li>Профмодули и Prof-каникулы</li><li>Конкурсы АгроНТРИ и «Я В АГРО»</li><li>Льготы при поступлении</li></ul>
+    <h2 class="section-title">Мы работаем <span class="gold">с каждым</span></h2>
+    <p class="section-sub">Программы адаптированы под потребности школьников, педагогов, руководителей школ и предприятий АПК.</p>
+    <div class="aud-grid">
+      <div class="aud">
+        <div class="aud-ico">🎓</div>
+        <h3>Школьникам</h3>
+        <p>Попробуй профессию ещё до поступления.</p>
+        <ul>
+          <li>Дни открытых дверей</li>
+          <li>Олимпиады и конкурсы</li>
+          <li>Профмодули и каникулярные школы</li>
+          <li>Консультации по поступлению</li>
+        </ul>
       </div>
-      <div class="aud"><h3>👩‍🏫 Учителям</h3>
-        <p>Готовые инструменты для профориентационной работы.</p>
-        <ul><li>Агротехнологические классы</li><li>Методическая поддержка</li><li>Экскурсии для классов</li><li>Совместные проекты</li></ul>
+      <div class="aud">
+        <div class="aud-ico">📚</div>
+        <h3>Учителям</h3>
+        <p>Методическая поддержка и повышение квалификации.</p>
+        <ul>
+          <li>Педмастерская</li>
+          <li>Вебинары и круглые столы</li>
+          <li>Методические материалы</li>
+          <li>Сопровождение олимпиад</li>
+        </ul>
       </div>
-      <div class="aud"><h3>🏫 Школам</h3>
-        <p>Партнёрство с университетом и выход на федеральный уровень.</p>
-        <ul><li>Соглашения о сотрудничестве</li><li>Профильные классы</li><li>Олимпиадные площадки</li><li>Федеральные конкурсы</li></ul>
+      <div class="aud">
+        <div class="aud-ico">🏫</div>
+        <h3>Директорам школ</h3>
+        <p>Долгосрочное партнёрство с университетом.</p>
+        <ul>
+          <li>Агроклассы на базе школы</li>
+          <li>Совместные проекты и гранты</li>
+          <li>Целевое обучение выпускников</li>
+          <li>Выездные профмодули</li>
+        </ul>
+      </div>
+      <div class="aud">
+        <div class="aud-ico">🚜</div>
+        <h3>Предприятиям АПК</h3>
+        <p>Выращиваем кадры под ваши задачи.</p>
+        <ul>
+          <li>Стажировки и практики</li>
+          <li>Целевая подготовка студентов</li>
+          <li>Экскурсии на производство</li>
+          <li>Совместные научные проекты</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACTS -->
-<section id="contacts">
+<!-- КОНТАКТЫ -->
+<section id="contacts" style="background:var(--bg-2);">
   <div class="container">
-    <div class="contacts">
+    <div class="contacts-wrap">
       <div>
-        <span class="eyebrow" style="color:var(--blue)">Контакты</span>
-        <h2 class="section-title">Давайте организуем что-то полезное</h2>
-        <div class="contact-item">
-          <div class="ci">📧</div>
-          <div><b>Email</b><span><a href="mailto:lebed1877@rambler.ru">lebed1877@rambler.ru</a></span></div>
-        </div>
+        <span class="eyebrow">Связаться</span>
+        <h2 class="section-title" style="margin-bottom:12px;">Давайте <span class="gold">знакомиться</span></h2>
+        <p class="section-sub" style="margin-bottom:32px;">Отвечаю в течение рабочего дня. Звоните, пишите или заходите в соцсети — договоримся о встрече и обсудим задачи.</p>
         <div class="contact-item">
           <div class="ci">📞</div>
-          <div><b>Телефон</b><span><a href="tel:+79818228117">8 981 822-81-17</a></span></div>
+          <div>
+            <b>Телефон</b>
+            <span><a href="tel:+79052169594">+7 (905) 216-95-94</a></span>
+          </div>
         </div>
         <div class="contact-item">
-          <div class="ci">💬</div>
-          <div><b>ВКонтакте</b><span><a href="https://vk.ru/maximus_ptz" target="_blank">vk.ru/maximus_ptz</a></span></div>
+          <div class="ci">✉️</div>
+          <div>
+            <b>Электронная почта</b>
+            <span><a href="mailto:m.lebedev@spbguvm.ru">m.lebedev@spbguvm.ru</a></span>
+          </div>
         </div>
         <div class="contact-item">
-          <div class="ci">🏛️</div>
-          <div><b>Университет</b><span>Санкт-Петербург, ул. Черниговская, д. 5<br>
-            <a href="https://spbguvm.ru//" target="_blank">spbguvm.ru</a></span></div>
+          <div class="ci">📍</div>
+          <div>
+            <b>Адрес университета</b>
+            <span>Санкт-Петербург, ул. Черниговская, д. 5</span>
+          </div>
+        </div>
+        <div class="socials">
+          <a class="social-btn" href="https://vk.com/lebedev_spbguvm" target="_blank">
+            <span>🔵</span> ВКонтакте
+          </a>
+          <a class="social-btn" href="https://max.ru/u/lebedev-spbguvm" target="_blank">
+            <span>💬</span> MAX
+          </a>
+          <a class="social-btn" href="https://spbguvm.ru/" target="_blank">
+            <span>🏛️</span> Сайт СПбГУВМ
+          </a>
         </div>
       </div>
       <div class="qr">
-        <img src="qr.png" alt="QR-код СПбГУВМ">
-        <p>Официальный сайт университета<br>spbguvm.ru</p>
+        <img src="qr.png" alt="QR-код — сайт университета">
+        <p>QR-код<br>на сайт СПбГУВМ</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="container">© 2026 Лебедев М.Н. · СПбГУВМ</div>
+  <div class="container">
+    <p>© 2026 Лебедев М.Н. · <b>СПбГУВМ</b> · Довузовская подготовка и профориентация</p>
+  </div>
 </footer>
+
+<!-- ПЛАВНАЯ ПРОКРУТКА (необязательная мелочь для мобильных) -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');
+    if(id.length>1 && document.querySelector(id)){
+      e.preventDefault();
+      document.querySelector(id).scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+</script>
 
 </body>
 </html>
