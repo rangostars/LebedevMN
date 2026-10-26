@@ -50,7 +50,7 @@ nav ul a:hover{color:#fff;background:rgba(212,175,95,.08);}
     url('univ-bg.JPG') center/cover no-repeat,
     linear-gradient(135deg,#061420 0%,#0e2a3d 100%);
   min-height:640px;}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;
   background:linear-gradient(180deg,transparent,var(--bg));z-index:auto;pointer-events:none;}
 .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;position:relative;z-index:3;}
 
@@ -58,15 +58,19 @@ nav ul a:hover{color:#fff;background:rgba(212,175,95,.08);}
 .silhouette{
   position:absolute;
   bottom:0;
-  z-index:1;
-  opacity:.22;
+  z-index:2;
+  opacity:.28;
   pointer-events:none;
-  filter:drop-shadow(0 0 40px rgba(212,175,95,.35));
+  filter:drop-shadow(0 0 40px rgba(212,175,95,.4));
 }
 .silhouette.dog{
   left:0;
   height:600px;
-  bottom:-60px;
+  width:auto;
+  max-width:45%;
+  bottom:-40px;
+  object-fit:contain;
+  object-position:bottom left;
 }
 @media(max-width:1400px){.silhouette.dog{height:520px;bottom:-50px;}}
 @media(max-width:1100px){.silhouette.dog{height:440px;bottom:-40px;}}
