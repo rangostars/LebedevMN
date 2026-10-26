@@ -55,21 +55,30 @@ nav ul a:hover{color:#fff;background:rgba(212,175,95,.08);}
 .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;position:relative;z-index:2;}
 
 /* Silhouettes */
-.silhouette{position:absolute;bottom:0;z-index:1;opacity:.10;pointer-events:none;
-  filter:drop-shadow(0 0 40px rgba(212,175,95,.35));}
-
-/* ЛЕВЫЙ силуэт — размером со строчки текста */
-.silhouette.dog{
-  left:24px;
-  height:200px;          /* было 1260 → уменьшили до «строчного» масштаба */
-  bottom:40px;           /* чуть приподнят от нижнего края */
+.silhouette{
+  position:absolute;
+  bottom:0;
+  z-index:2;                    /* поднял выше градиента hero::after — теперь не съедается */
+  opacity:.16;
+  pointer-events:none;
+  filter:drop-shadow(0 0 40px rgba(212,175,95,.35));
 }
 
+/* ЛЕВЫЙ силуэт — крупный, но не гигантский */
+.silhouette.dog{
+  left:0;
+  height:560px;                 /* «золотая середина»: заметно, но не перекрывает текст */
+  bottom:-40px;                 /* чуть прячем низ за край hero */
+}
+
+@media(max-width:1400px){
+  .silhouette.dog{height:480px;bottom:-30px;}
+}
 @media(max-width:1100px){
-  .silhouette.dog{height:160px;left:16px;bottom:30px;}
+  .silhouette.dog{height:400px;bottom:-20px;}
 }
 @media(max-width:900px){
-  .silhouette.dog{height:120px;left:8px;bottom:20px;opacity:.08;}
+  .silhouette.dog{height:280px;left:-20px;bottom:-10px;opacity:.10;}
 }
 
 .hero h1{font-size:58px;font-weight:800;margin-bottom:22px;line-height:1.05;letter-spacing:-1px;}
